@@ -2,13 +2,13 @@ package com.example.myweatherapp
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.TextView.OnEditorActionListener
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.myweatherapp.weatherdataclasses.hourly_four_day.WeatherReport
@@ -36,6 +36,8 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
         initViews(view)
+
+
 
         btn_search.setOnClickListener {
             performSearch()
@@ -104,6 +106,9 @@ class SearchFragment : Fragment() {
             }
 
         })
+
+
+
     }
 
     // go to the report fragment
